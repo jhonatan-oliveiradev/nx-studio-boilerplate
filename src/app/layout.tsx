@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Dela_Gothic_One, Poppins } from "next/font/google";
 
+import { CookieConsent } from "@/components/cookie-consent";
 import { Providers } from "@/providers/providers";
 
 const heading = Dela_Gothic_One({
@@ -85,7 +86,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${heading.variable} ${body.variable} antialiased`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <CookieConsent />
+          {children}
+        </Providers>
       </body>
     </html>
   );

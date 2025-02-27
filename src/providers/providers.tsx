@@ -3,7 +3,6 @@
 import { Suspense } from "react";
 
 import Loading from "@/app/loading";
-import { CookieConsent } from "@/components/cookie-consent";
 import GoogleAnalytics from "@/components/google-analytics";
 import { BackToTop } from "@/components/shared/back-to-top";
 import { WhatsAppButton } from "@/components/shared/whatsapp-button";
@@ -23,7 +22,6 @@ export function Providers({
         <GoogleAnalytics />
         <BackToTop />
         <WhatsAppButton />
-        <CookieConsent />
         <>{children}</>
       </ThemeProvider>
     </Suspense>
